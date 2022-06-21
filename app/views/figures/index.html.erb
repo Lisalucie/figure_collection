@@ -1,1 +1,13 @@
-<h1>hello</h1>
+<% @figures.each do |figure| %>
+  <%= link_to figure_path(figure), class: "text-decoration-none" do %>
+    <%= figure.name %> - <%= figure.version %>
+    <h4>Type</h4>
+    <%= figure.type %>
+    <h4>Manufacturer</h4>
+    <%= figure.manufacturer%>
+    <h4>Size</h4>
+    <%= figure.size %>
+    <h4>Price</h4>
+    <%= figure.price %>
+  <% end %>
+<% end %>
