@@ -17,4 +17,4 @@ puts "Creating figures..."
 gerard = User.create(nickname: "Gege", password: "azerty", email: "gerard@zoo.com")
 
 sakura_star_bless_you = Figure.create!(name: "Card Captor Sakura", manufacturer: "Good Smile Company", price: "27,600",
-version: "Star Bless You", size: "1/6", type: "Prepainted")
+version: "Star Bless You", size: "1/6", category: "Prepainted")
