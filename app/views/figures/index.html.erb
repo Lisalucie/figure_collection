@@ -1,13 +1,23 @@
-<% @figures.each do |figure| %>
-  <%= link_to figure_path(figure), class: "text-decoration-none" do %>
-    <%= figure.name %> - <%= figure.version %>
-    <h4>Type</h4>
-    <%= figure.type %>
-    <h4>Manufacturer</h4>
-    <%= figure.manufacturer%>
-    <h4>Size</h4>
-    <%= figure.size %>
-    <h4>Price</h4>
-    <%= figure.price %>
-  <% end %>
-<% end %>
+
+
+<div class="card-product">
+  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+  <div class="card-product-infos">
+    <% @figures.each do |figure| %>
+      <%= link_to figure_path(figure), class: "text-decoration-none" do %>
+        <h3><%= figure.name %> - <%= figure.version %></h3>
+        <h4>Type</h4>
+        <p><%= figure.category %> </p>
+        <h4>Manufacturer</h4>
+        <p><%= figure.manufacturer%></p>
+        <h4>Size</h4>
+        <p><%= figure.size %></p>
+        <h4>Price</h4>
+        <p><%= figure.price %> ¥</p>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+
+
+<%= link_to "Back to homepage", root_path %>
